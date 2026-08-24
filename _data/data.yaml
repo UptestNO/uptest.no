@@ -27,6 +27,7 @@ common:
     hq: "Palanga, Lithuania"
     hq_link: "https://maps.app.goo.gl/hGXkK35Qdv2JQvNU6"
     get_in_touch: "Get in Touch"
+    standards: "Standards"
     
   lt:
     language: "Kalba"
@@ -43,6 +44,7 @@ common:
     hq: "Palanga, Lietuva"
     hq_link: "https://maps.app.goo.gl/hGXkK35Qdv2JQvNU6"
     get_in_touch: "Susisiekite su mumis"
+    standards: "Standartai"
   
   "no":
     language: "Språk"
@@ -59,6 +61,7 @@ common:
     hq: "Palanga, Litauen"
     hq_link: "https://maps.app.goo.gl/hGXkK35Qdv2JQvNU6"
     get_in_touch: "Ta kontakt"
+    standards: "Standarder"
 
 
 home:
