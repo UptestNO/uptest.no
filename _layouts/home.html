@@ -1,0 +1,152 @@
+{% assign site_data = site.data.data %}
+
+<!DOCTYPE html>
+<html lang="{{ page.lang }}" class="scroll-smooth h-full">
+
+<head>
+    {% include head.html %}
+</head>
+
+<body class="bg-brand-950 text-slate-100 antialiased font-sans flex flex-col min-h-[100dvh] m-0 pb-[env(safe-area-inset-bottom)]">
+
+<!-- 1. HEADERIS -->
+{% include header.html %}
+
+<!-- 2. HERO SEKCIJA -->
+<section id="hero-slider" class="relative w-full bg-brand-950 flex-grow flex flex-col justify-between py-3 sm:py-6 lg:py-8 overflow-hidden min-h-0">
+
+    <!-- Fono paveiksliukai -->
+    <div class="absolute inset-0 z-0 pointer-events-none">
+        {% for slide_item in site_data.slides %}
+          {% assign slide = slide_item[1] %}
+          <div class="bg-slide absolute inset-0 {% if forloop.first %}opacity-100{% else %}opacity-0{% endif %} transition-opacity duration-700 ease-in-out">
+              <img src="{{ slide.image }}" class="w-full h-full object-cover object-center brightness-[0.95] contrast-[1.05]" alt="{{ slide.title[page.lang] }}">
+          </div>
+        {% endfor %}
+
+        <!-- Kairės pusės tamsinimas skaitomumui -->
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-950/95 via-brand-950/75 via-50% to-brand-950/10 sm:to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-950/90 via-transparent to-brand-950/30"></div>
+    </div>
+
+    <!-- Desktop slider controllers -->
+    <div class="slider-controller hidden lg:flex absolute right-8 top-6 z-30 items-center gap-3 bg-brand-900/80 backdrop-blur-md px-4 py-2 rounded-xl border border-brand-800">
+        <div class="text-[11px] font-bold text-white tracking-wider tabular-nums flex items-center gap-1">
+            <span class="text-brand-400 current-num">01</span>
+            <span class="text-slate-500">/</span>
+            <span class="text-slate-400 total-num">05</span>
+        </div>
+        <div class="w-16 h-1 bg-brand-800 rounded-full overflow-hidden">
+            <div class="slide-progress h-full bg-brand-400 w-0"></div>
+        </div>
+        <div class="flex items-center gap-1">
+            <button class="prev-slide-btn text-slate-300 hover:text-white transition-colors p-1.5 cursor-pointer rounded-lg hover:bg-brand-800" aria-label="Previous slide">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button class="next-slide-btn text-slate-300 hover:text-white transition-colors p-1.5 cursor-pointer rounded-lg hover:bg-brand-800" aria-label="Next slide">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Vidinis konteineris -->
+    <div class="relative z-20 max-w-7xl mx-auto w-full px-3 sm:px-6 lg:px-8 flex-grow flex flex-col justify-between gap-3 sm:gap-6 min-h-0">
+        
+        <!-- Slaiderio tekstai -->
+        <div class="flex-1 flex flex-col justify-center my-auto py-2 sm:py-6 lg:py-6 min-h-0">
+            <div class="w-full max-w-2xl text-left relative">
+                {% for slide_item in site_data.slides %}
+                  {% assign slide = slide_item[1] %}
+                  
+                  <div class="slide-text transition-opacity duration-500 {% if forloop.first %}opacity-100 relative{% else %}opacity-0 pointer-events-none absolute inset-0{% endif %} flex flex-col justify-center" data-index="{{ forloop.index0 }}">
+                      <div>
+                          <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider bg-brand-900/90 text-brand-300 border border-brand-400/40 backdrop-blur-md mb-2 sm:mb-4 shadow-sm">
+                              {{ slide.badge[page.lang] }}
+                          </span>
+                      </div>
+          
+                      {% if forloop.first %}
+                        <h1 class="text-white text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-snug sm:leading-tight mb-2 sm:mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
+                            {{ slide.title[page.lang] }}
+                        </h1>
+                      {% else %}
+                        <h2 class="text-white text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-snug sm:leading-tight mb-2 sm:mb-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
+                            {{ slide.title[page.lang] }}
+                        </h2>
+                      {% endif %}
+          
+                      <p class="text-slate-100 text-xs sm:text-base lg:text-lg font-medium max-w-xl leading-relaxed mb-3 sm:mb-6 drop-shadow-[0_1px_6px_rgba(0,0,0,0.8)]">
+                          {{ slide.desc[page.lang] }}
+                      </p>
+          
+                      <div>
+                          <a href="{{ slide.link[page.lang] }}" class="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-lg text-xs sm:text-sm font-bold text-slate-950 bg-brand-400 hover:bg-brand-300 transition-all shadow-lg shadow-black/40 hover:-translate-y-0.5">
+                              {{ slide.btn_text[page.lang] }}
+                              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                          </a>
+                      </div>
+                  </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- APATINĖ DALIS: Kontroleriai ir kortelės -->
+        <div class="w-full flex flex-col gap-2 sm:gap-3 flex-shrink-0">
+            
+            <!-- Mobile slider controllers -->
+            <div class="slider-controller w-full flex justify-end lg:hidden px-0.5">
+                <div class="inline-flex items-center gap-2 bg-brand-900/90 backdrop-blur-md px-2.5 py-1 rounded-lg border border-brand-800">
+                    <div class="text-[10px] font-bold text-white tracking-wider tabular-nums flex items-center gap-0.5">
+                        <span class="text-brand-400 current-num">01</span>
+                        <span class="text-slate-500">/</span>
+                        <span class="text-slate-400 total-num">05</span>
+                    </div>
+                    <div class="w-12 h-1 bg-brand-800 rounded-full overflow-hidden">
+                        <div class="slide-progress h-full bg-brand-400 w-0"></div>
+                    </div>
+                    <div class="flex items-center gap-0.5">
+                        <button class="prev-slide-btn text-slate-300 hover:text-white transition-colors p-0.5 cursor-pointer" aria-label="Previous slide">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                        </button>
+                        <button class="next-slide-btn text-slate-300 hover:text-white transition-colors p-0.5 cursor-pointer" aria-label="Next slide">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kortelės -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-4 w-full">
+                {% for card in site_data.cards %}
+                <a href="{{ card.link[page.lang] }}" class="relative overflow-hidden p-3 sm:p-5 rounded-xl bg-brand-900/85 hover:bg-brand-900 border border-brand-800 hover:border-brand-400/60 backdrop-blur-md transition-all duration-300 group shadow-xl flex flex-col justify-between">
+                    <div class="relative z-10 pr-16 sm:pr-28">
+                        <h3 class="text-xs sm:text-lg font-bold text-white group-hover:text-brand-300 transition-colors">
+                            {{ card.title[page.lang] }}
+                        </h3>
+                        <p class="text-xs sm:text-sm text-slate-300 mt-1 leading-snug sm:leading-relaxed">
+                            {{ card.desc[page.lang] }}
+                        </p>
+                        <div class="mt-2 sm:mt-2.5 flex items-center gap-1 text-xs sm:text-sm font-semibold text-brand-400 group-hover:text-brand-300 transition-colors">
+                            {{ card.btn_text[page.lang] }} 
+                            <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </div>
+                    </div>
+                    <div class="absolute right-0 top-0 bottom-0 w-14 sm:w-28 bg-brand-950/60 group-hover:bg-brand-950/80 transition-colors flex items-center justify-center border-l border-brand-800">
+                        <img src="{{ site.baseurl }}/{{ card.image }}" alt="{{ card.title[page.lang] }}" class="w-9 h-9 sm:w-20 sm:h-20 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all object-contain">
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- 3. FOOTERIS -->
+{% include footer.html %}
+
+<script src="home.js?v=0.140"></script>
+
+</body>
+</html>

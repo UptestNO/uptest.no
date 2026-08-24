@@ -1,0 +1,45 @@
+{% assign data = site.data.data %}
+
+<!DOCTYPE html>
+<html lang="{{ page.lang }}" class="scroll-smooth">
+    
+<head>
+    {% include head.html %}
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen m-0">
+
+    <!-- Įtraukiamas headeris -->
+    {% include header.html %}
+
+<!-- Subpage Hero / Tamsiai žalias Brand Gradientas -->
+<section class="relative bg-gradient-to-r from-brand-900 via-brand-800 to-brand-950 py-16 lg:py-20 text-white shadow-md">
+    <div class="absolute inset-0 bg-black/10 pointer-events-none"></div>
+    <div class="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight drop-shadow-sm text-white">
+            {{ page.title }}
+        </h1>
+        {% if page.subtitle %}
+        <p class="mt-4 text-lg sm:text-xl text-brand-200 font-normal max-w-2xl mx-auto drop-shadow-sm">
+            {{ page.subtitle }}
+        </p>
+        {% endif %}
+    </div>
+</section>
+
+    <!-- Pagrindinio teksto sekcija -->
+    <main class="flex-grow bg-white py-12 lg:py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 text-slate-700 leading-relaxed font-normal">
+            {{ content }}
+
+            {% if page.gallery_folder %}
+                {% include gallery.html %}
+            {% endif %}
+        </div>
+    </main>
+
+    <!-- Footeris -->
+    {% include footer.html %}
+    
+</body>
+</html>
