@@ -239,7 +239,7 @@ slides:
       en: "non-destructive-testing/"
       lt: "neardomoji-kontrole/"
       "no": "ikke-destruktiv-proving/"
-    image: "images/uptest-neardomoji-kontrole-6.jpg"
+    image: "/images/uptest-neardomoji-kontrole-6.jpg"
 
   rope:
     badge:
@@ -262,7 +262,7 @@ slides:
       en: "rope-access/"
       lt: "darbai-aukstyje/"
       "no": "tilkomstteknikk/"
-    image: "images/uptest-neardomoji-kontrole-5.jpg"
+    image: "/images/uptest-neardomoji-kontrole-5.jpg"
       
   equipment:
     badge:
@@ -285,7 +285,7 @@ slides:
       en: "equipment/"
       lt: "nk-iranga-irangos-nuoma/"
       "no": "ndt-utstyr/"
-    image: "images/uptest-neardomoji-kontrole-8.jpg"
+    image: "/images/uptest-neardomoji-kontrole-8.jpg"
 
   career:
     badge:
@@ -308,4 +308,4 @@ slides:
       en: "career/"
       lt: "karjera/"
       "no": "karriere/"
-    image: "images/uptest-neardomoji-kontrole-3.jpg"
+    image: "/images/uptest-neardomoji-kontrole-3.jpg"
