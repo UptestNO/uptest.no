@@ -139,8 +139,8 @@ nav:
       "no": "Våre sertifikater"
     link:
       en: "certificates/"
-      lt: "sertifikatai/"
-      "no": "sertifikater/"
+      lt: "lt/sertifikatai/"
+      "no": "no/sertifikater/"
     secondary: true  # <--- Žyma, kad tai priklauso viršutinei juostai
 
   gallery:
@@ -150,8 +150,8 @@ nav:
       "no": "Galleri"
     link:
       en: "gallery/"
-      lt: "galerija/"
-      "no": "galleri/"
+      lt: "lt/galerija/"
+      "no": "no/galleri/"
     secondary: true  # <--- Žyma, kad tai priklauso viršutinei juostai
     
 
