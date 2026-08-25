@@ -237,8 +237,8 @@ slides:
       "no": "Les mer"
     link:
       en: "non-destructive-testing/"
-      lt: "lt/neardomoji-kontrole/"
-      "no": "no/ikke-destruktiv-proving/"
+      lt: "neardomoji-kontrole/"
+      "no": "ikke-destruktiv-proving/"
     image: "images/uptest-neardomoji-kontrole-6.jpg"
 
   rope:
@@ -260,8 +260,8 @@ slides:
       "no": "Les mer"
     link:
       en: "rope-access/"
-      lt: "lt/darbai-aukstyje/"
-      "no": "no/tilkomstteknikk/"
+      lt: "darbai-aukstyje/"
+      "no": "tilkomstteknikk/"
     image: "images/uptest-neardomoji-kontrole-5.jpg"
       
   equipment:
@@ -283,8 +283,8 @@ slides:
       "no": "Les mer"
     link:
       en: "equipment/"
-      lt: "lt/nk-iranga-irangos-nuoma/"
-      "no": "no/ndt-utstyr/"
+      lt: "nk-iranga-irangos-nuoma/"
+      "no": "ndt-utstyr/"
     image: "images/uptest-neardomoji-kontrole-8.jpg"
 
   career:
@@ -306,6 +306,6 @@ slides:
       "no": "Søk her"
     link:
       en: "career/"
-      lt: "lt/karjera/"
-      "no": "no/karriere/"
+      lt: "karjera/"
+      "no": "karriere/"
     image: "images/uptest-neardomoji-kontrole-3.jpg"
