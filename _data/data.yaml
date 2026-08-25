@@ -214,8 +214,8 @@ slides:
       "no": "Om oss"
     link: 
       en: "about-us/"
-      lt: "lt/apie-mus/"
-      "no": "no/om-oss/"
+      lt: "apie-mus/"
+      "no": "om-oss/"
     image: "images/uptest-neardomoji-kontrole-1.jpg"
 
   ndt:
