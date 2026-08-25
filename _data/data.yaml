@@ -78,8 +78,8 @@ nav:
       "no": "Om oss"
     link:
       en: "about-us/"
-      lt: "lt/apie-mus/"
-      "no": "no/om-oss/"
+      lt: "apie-mus/"
+      "no": "om-oss/"
 
   ndt:
     title:
@@ -88,8 +88,8 @@ nav:
       "no": "Ikke-destruktiv prøving"
     link:
       en: "non-destructive-testing/"
-      lt: "lt/neardomoji-kontrole/"
-      "no": "no/ikke-destruktiv-proving/"
+      lt: "neardomoji-kontrole/"
+      "no": "ikke-destruktiv-proving/"
 
   rope:
     title:
@@ -98,8 +98,8 @@ nav:
       "no": "Tilkomstteknikk"
     link:
       en: "rope-access/"
-      lt: "lt/darbai-aukstyje/"
-      "no": "no/tilkomstteknikk/"
+      lt: "darbai-aukstyje/"
+      "no": "tilkomstteknikk/"
 
   equipment:
     title:
@@ -108,8 +108,8 @@ nav:
       "no": "NDT-utstyr"
     link:
       en: "equipment/"
-      lt: "lt/nk-iranga-irangos-nuoma/"
-      "no": "no/ndt-utstyr/"
+      lt: "nk-iranga-irangos-nuoma/"
+      "no": "ndt-utstyr/"
 
   career:
     title:
@@ -118,8 +118,8 @@ nav:
       "no": "Jobb og karriere"
     link:
       en: "career/"
-      lt: "lt/karjera/"
-      "no": "no/karriere/"
+      lt: "karjera/"
+      "no": "karriere/"
 
   contacts:
     title:
@@ -128,8 +128,8 @@ nav:
       "no": "Kontakt oss"
     link:
       en: "contacts/"
-      lt: "lt/kontaktai/"
-      "no": "no/kontakt/"
+      lt: "kontaktai/"
+      "no": "kontakt/"
     highlight: true
     
   certificates:
@@ -139,8 +139,8 @@ nav:
       "no": "Våre sertifikater"
     link:
       en: "certificates/"
-      lt: "lt/sertifikatai/"
-      "no": "no/sertifikater/"
+      lt: "sertifikatai/"
+      "no": "sertifikater/"
     secondary: true  # <--- Žyma, kad tai priklauso viršutinei juostai
 
   gallery:
@@ -150,8 +150,8 @@ nav:
       "no": "Galleri"
     link:
       en: "gallery/"
-      lt: "lt/galerija/"
-      "no": "no/galleri/"
+      lt: "galerija/"
+      "no": "galleri/"
     secondary: true  # <--- Žyma, kad tai priklauso viršutinei juostai
     
 
@@ -167,8 +167,8 @@ cards:
       "no": "Profesjonelle tilkomstteknikkløsninger, inspeksjoner og industrielt arbeid."
     link:
       en: "rope-access/"
-      lt: "lt/darbai-aukstyje/"
-      "no": "no/tilkomstteknikk/"
+      lt: "darbai-aukstyje/"
+      "no": "tilkomstteknikk/"
     btn_text:
       lt: "Plačiau"
       en: "Learn more"
@@ -186,8 +186,8 @@ cards:
       "no": "Omfattende VT, MT, PT, UT og PAUT inspeksjoner for materialintegritet."
     link:
       en: "non-destructive-testing/"
-      lt: "lt/neardomoji-kontrole/"
-      "no": "no/ikke-destruktiv-proving/"
+      lt: "neardomoji-kontrole/"
+      "no": "ikke-destruktiv-proving/"
     btn_text:
       lt: "Plačiau"
       en: "Learn more"
