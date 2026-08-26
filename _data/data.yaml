@@ -78,8 +78,8 @@ nav:
       "no": "Om oss"
     link:
       en: "about-us/"
-      lt: "apie-mus/"
-      "no": "om-oss/"
+      lt: "lt/apie-mus/"
+      "no": "no/om-oss/"
 
   ndt:
     title:
@@ -98,8 +98,8 @@ nav:
       "no": "Tilkomstteknikk"
     link:
       en: "rope-access/"
-      lt: "darbai-aukstyje/"
-      "no": "tilkomstteknikk/"
+      lt: "lt/darbai-aukstyje/"
+      "no": "no/tilkomstteknikk/"
 
   equipment:
     title:
@@ -108,8 +108,8 @@ nav:
       "no": "NDT-utstyr"
     link:
       en: "equipment/"
-      lt: "nk-iranga-irangos-nuoma/"
-      "no": "ndt-utstyr/"
+      lt: "lt/nk-iranga-irangos-nuoma/"
+      "no": "no/ndt-utstyr/"
 
   career:
     title:
@@ -118,8 +118,8 @@ nav:
       "no": "Jobb og karriere"
     link:
       en: "career/"
-      lt: "karjera/"
-      "no": "karriere/"
+      lt: "lt/karjera/"
+      "no": "no/karriere/"
 
   contacts:
     title:
@@ -128,8 +128,8 @@ nav:
       "no": "Kontakt oss"
     link:
       en: "contacts/"
-      lt: "kontaktai/"
-      "no": "kontakt/"
+      lt: "lt/kontaktai/"
+      "no": "no/kontakt/"
     highlight: true
     
   certificates:
