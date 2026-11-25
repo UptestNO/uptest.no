@@ -1,0 +1,44 @@
+<!-- Subpage Hero / Tamsiai žalias Brand Gradientas -->
+<section id="page-hero" class="relative bg-gradient-to-r from-brand-900 via-brand-800 to-brand-950 py-8 sm:py-12 lg:py-16 text-white shadow-md">
+    <div class="absolute inset-0 bg-black/10 pointer-events-none"></div>
+    <div class="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight drop-shadow-sm text-white">
+            {{ page.title }}
+        </h1>
+        {% if page.subtitle %}
+        <p class="mt-2 sm:mt-4 text-sm sm:text-lg lg:text-xl text-brand-200 font-normal max-w-2xl mx-auto drop-shadow-sm">
+            {{ page.subtitle }}
+        </p>
+        {% endif %}
+    </div>
+</section>
+
+<!-- Kompaktiška sticky juosta skrolinant -->
+<div id="sticky-page-title" aria-hidden="true" class="fixed top-0 inset-x-0 z-20 bg-brand-900/95 backdrop-blur-md border-b border-brand-800/80 text-white shadow-md py-2.5 sm:py-3 transition-all duration-200 -translate-y-full opacity-0 pointer-events-none">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="block text-sm sm:text-base font-bold tracking-tight truncate">
+            {{ page.title }}
+        </span>
+    </div>
+</div>
+
+<script>
+    (function () {
+        const hero = document.getElementById('page-hero');
+        const stickyBar = document.getElementById('sticky-page-title');
+        if (!hero || !stickyBar || !('IntersectionObserver' in window)) return;
+
+        const observer = new IntersectionObserver((entries) => {
+            const heroVisible = entries[0].isIntersecting;
+            stickyBar.classList.toggle('-translate-y-full', heroVisible);
+            stickyBar.classList.toggle('opacity-0', heroVisible);
+            stickyBar.classList.toggle('pointer-events-none', heroVisible);
+            stickyBar.classList.toggle('translate-y-0', !heroVisible);
+            stickyBar.classList.toggle('opacity-100', !heroVisible);
+            stickyBar.classList.toggle('pointer-events-auto', !heroVisible);
+            stickyBar.setAttribute('aria-hidden', heroVisible ? 'true' : 'false');
+        }, { threshold: 0 });
+
+        observer.observe(hero);
+    })();
+</script>
