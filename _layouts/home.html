@@ -30,20 +30,20 @@
     </div>
 
     <!-- Desktop slider controllers -->
-    <div class="slider-controller hidden lg:flex absolute right-8 top-6 z-30 items-center gap-3 bg-brand-900/80 backdrop-blur-md px-4 py-2 rounded-xl border border-brand-800">
-        <div class="text-[11px] font-bold text-white tracking-wider tabular-nums flex items-center gap-1">
-            <span class="text-brand-400 current-num">01</span>
-            <span class="text-slate-500">/</span>
-            <span class="text-slate-400 total-num">05</span>
+    <div class="slider-controller hidden lg:flex absolute right-8 top-6 z-30 items-center gap-3 drop-shadow-[0_1px_4px_rgba(0,0,0,0.85)]">
+        <div class="text-xs font-bold text-white tracking-wider tabular-nums flex items-center gap-1">
+            <span class="text-brand-300 current-num">01</span>
+            <span class="text-white/40">/</span>
+            <span class="text-white/75 total-num">05</span>
         </div>
-        <div class="w-16 h-1 bg-brand-800 rounded-full overflow-hidden">
-            <div class="slide-progress h-full bg-brand-400 w-0"></div>
+        <div class="w-16 h-0.5 bg-white/25 rounded-full overflow-hidden">
+            <div class="slide-progress h-full bg-brand-300 w-0"></div>
         </div>
-        <div class="flex items-center gap-1">
-            <button class="prev-slide-btn text-slate-300 hover:text-white transition-colors p-1.5 cursor-pointer rounded-lg hover:bg-brand-800" aria-label="Previous slide">
+        <div class="flex items-center gap-0.5">
+            <button class="prev-slide-btn text-white/80 hover:text-white transition-colors p-1.5 cursor-pointer rounded-full hover:bg-white/10" aria-label="Previous slide">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
             </button>
-            <button class="next-slide-btn text-slate-300 hover:text-white transition-colors p-1.5 cursor-pointer rounded-lg hover:bg-brand-800" aria-label="Next slide">
+            <button class="next-slide-btn text-white/80 hover:text-white transition-colors p-1.5 cursor-pointer rounded-full hover:bg-white/10" aria-label="Next slide">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </button>
         </div>
@@ -95,20 +95,20 @@
             
             <!-- Mobile slider controllers -->
             <div class="slider-controller w-full flex justify-end lg:hidden px-0.5">
-                <div class="inline-flex items-center gap-2 bg-brand-900/90 backdrop-blur-md px-2.5 py-1 rounded-lg border border-brand-800">
-                    <div class="text-[10px] font-bold text-white tracking-wider tabular-nums flex items-center gap-0.5">
-                        <span class="text-brand-400 current-num">01</span>
-                        <span class="text-slate-500">/</span>
-                        <span class="text-slate-400 total-num">05</span>
+                <div class="inline-flex items-center gap-2 py-0.5 drop-shadow-[0_1px_4px_rgba(0,0,0,0.85)]">
+                    <div class="text-[11px] font-bold text-white tracking-wider tabular-nums flex items-center gap-0.5">
+                        <span class="text-brand-300 current-num">01</span>
+                        <span class="text-white/40">/</span>
+                        <span class="text-white/75 total-num">05</span>
                     </div>
-                    <div class="w-12 h-1 bg-brand-800 rounded-full overflow-hidden">
-                        <div class="slide-progress h-full bg-brand-400 w-0"></div>
+                    <div class="w-12 h-0.5 bg-white/25 rounded-full overflow-hidden">
+                        <div class="slide-progress h-full bg-brand-300 w-0"></div>
                     </div>
                     <div class="flex items-center gap-0.5">
-                        <button class="prev-slide-btn text-slate-300 hover:text-white transition-colors p-0.5 cursor-pointer" aria-label="Previous slide">
+                        <button class="prev-slide-btn text-white/80 hover:text-white transition-colors p-1 cursor-pointer rounded-full hover:bg-white/10" aria-label="Previous slide">
                             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
                         </button>
-                        <button class="next-slide-btn text-slate-300 hover:text-white transition-colors p-0.5 cursor-pointer" aria-label="Next slide">
+                        <button class="next-slide-btn text-white/80 hover:text-white transition-colors p-1 cursor-pointer rounded-full hover:bg-white/10" aria-label="Next slide">
                             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                         </button>
                     </div>
