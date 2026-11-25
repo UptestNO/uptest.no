@@ -312,7 +312,7 @@ jobs:
     apply_label: "Apply"
     apply_title: "Apply for This Position"
     apply_desc: "Send your CV and relevant certificates by email or contact our team directly."
-    apply_btn: "Apply via Email"
+    apply_btn: "Apply"
     closed_notice: "This position is currently closed. Please visit our careers page for other opportunities."
     types:
       FULL_TIME: "Full-time"
@@ -331,7 +331,7 @@ jobs:
     apply_label: "Kandidatuoti"
     apply_title: "Kandidatuoti į šią poziciją"
     apply_desc: "Atsiųskite savo CV ir turimus sertifikatus el. paštu arba susisiekite su mūsų komanda tiesiogiai."
-    apply_btn: "Kandidatuoti el. paštu"
+    apply_btn: "Kandidatuoti"
     closed_notice: "Ši pozicija šiuo metu uždaryta. Kviečiame peržiūrėti kitas karjeros galimybes."
     types:
       FULL_TIME: "Pilnas etatas"
@@ -350,7 +350,7 @@ jobs:
     apply_label: "Søk"
     apply_title: "Søk på denne stillingen"
     apply_desc: "Send din CV og relevante sertifikater på e-post, eller ta kontakt med teamet vårt direkte."
-    apply_btn: "Søk via e-post"
+    apply_btn: "Søk"
     closed_notice: "Denne stillingen er for øyeblikket stengt. Besøk vår karriereside for andre muligheter."
     types:
       FULL_TIME: "Heltid"
