@@ -18,7 +18,14 @@
                     <span class="text-slate-500 font-medium mr-1 hidden sm:inline">{{ data.common[page.lang].language }}:</span>
                     {% for lang in data.languages %}
                         {% assign target_link = lang.link %}
-                        {% if page.current_page %}
+                        {% if page.layout == 'job' and page.job_id %}
+                            {% assign job_match = site.jobs | where: "job_id", page.job_id | where: "lang", lang.code | first %}
+                            {% if job_match and job_match.active != false %}
+                                {% assign target_link = job_match.url | remove_first: '/' %}
+                            {% else %}
+                                {% assign target_link = data.nav.career.link[lang.code] %}
+                            {% endif %}
+                        {% elsif page.current_page %}
                             {% assign nav_match = data.nav[page.current_page] %}
                             {% if nav_match and nav_match.link[lang.code] %}
                                 {% assign target_link = nav_match.link[lang.code] %}
@@ -75,6 +82,8 @@
                                 {% assign is_active = false %}
                                 {% if page.current_page == nav_item[0] or page.url == item.link[page.lang] %}
                                     {% assign is_active = true %}
+                                {% elsif page.layout == 'job' and nav_item[0] == 'career' %}
+                                    {% assign is_active = true %}
                                 {% endif %}
                                 
                                 {% if item.highlight %}
@@ -111,6 +120,8 @@
                     {% unless item.secondary %}
                         {% assign is_active = false %}
                         {% if page.current_page == nav_item[0] or page.url == item.link[page.lang] %}
+                            {% assign is_active = true %}
+                        {% elsif page.layout == 'job' and nav_item[0] == 'career' %}
                             {% assign is_active = true %}
                         {% endif %}
                         

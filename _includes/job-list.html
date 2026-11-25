@@ -1,0 +1,59 @@
+{% assign j = site.data.data.jobs[page.lang] %}
+{% assign lang_jobs = site.jobs | where: "lang", page.lang | sort: "date_posted" | reverse %}
+{% assign active_jobs = "" | split: "" %}
+{% for job in lang_jobs %}
+    {% if job.active != false %}
+        {% assign active_jobs = active_jobs | push: job %}
+    {% endif %}
+{% endfor %}
+
+{% if active_jobs.size > 0 %}
+<div class="space-y-6">
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight flex items-center gap-3">
+        <span class="w-2.5 h-8 bg-brand-500 rounded-full"></span>
+        {{ j.section_title }}
+    </h2>
+
+    <div class="space-y-4">
+        {% for job in active_jobs %}
+        {% assign emp_type_label = job.employment_type_display | default: j.types[job.employment_type] | default: job.employment_type %}
+        {% assign location_text = job.location_display | default: job.location_city | default: job.location_country %}
+        <a href="{{ job.url | relative_url }}" class="block bg-white rounded-2xl p-6 border border-slate-200/80 hover:border-brand-500 hover:shadow-lg transition-all duration-300 group shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div class="space-y-2">
+                    <h3 class="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-brand-600 transition-colors">
+                        {{ job.title }}
+                    </h3>
+
+                    <div class="flex flex-wrap items-center gap-2 text-xs font-medium">
+                        {% if location_text %}
+                        <span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-700">{{ location_text }}</span>
+                        {% endif %}
+                        {% if emp_type_label %}
+                        <span class="px-2.5 py-1 rounded-full bg-brand-50 text-brand-700">{{ emp_type_label }}</span>
+                        {% endif %}
+                        {% if job.salary_display %}
+                        <span class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-700">{{ job.salary_display }}</span>
+                        {% endif %}
+                    </div>
+
+                    {% if job.summary %}
+                    <p class="text-sm text-slate-600 leading-relaxed pt-1">
+                        {{ job.summary }}
+                    </p>
+                    {% endif %}
+                </div>
+
+                <div class="flex-shrink-0">
+                    <span class="inline-flex items-center text-sm font-semibold text-brand-600 group-hover:text-brand-800 transition-colors">
+                        {{ j.view_position }} <span class="ml-1 group-hover:translate-x-1 transition-transform" aria-hidden="true">&rarr;</span>
+                    </span>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+
+<hr class="border-slate-100 my-8">
+{% endif %}

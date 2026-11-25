@@ -1,0 +1,172 @@
+{% assign data = site.data.data %}
+{% assign c = data.common[page.lang] %}
+{% assign j = data.jobs[page.lang] %}
+{% assign career_link = data.nav.career.link[page.lang] %}
+{% assign emp_type_label = page.employment_type_display | default: j.types[page.employment_type] | default: page.employment_type %}
+{% assign location_text = page.location_display | default: page.location_city | default: page.location_country %}
+
+<!DOCTYPE html>
+<html lang="{{ page.lang }}" class="scroll-smooth">
+
+<head>
+    {% include head.html %}
+
+    {% if page.active != false %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "JobPosting",
+      "title": {{ page.title | jsonify }},
+      "description": {{ content | jsonify }},
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": {{ c.company | jsonify }},
+        "value": {{ page.job_id | default: page.slug | jsonify }}
+      },
+      "datePosted": {{ page.date_posted | date: "%Y-%m-%d" | jsonify }},
+      {% if page.valid_through %}"validThrough": {{ page.valid_through | date: "%Y-%m-%d" | jsonify }},{% endif %}
+      {% if page.employment_type %}"employmentType": {{ page.employment_type | jsonify }},{% endif %}
+      "hiringOrganization": {
+        "@type": "Organization",
+        "name": {{ c.company | jsonify }},
+        "sameAs": {{ site.url | jsonify }},
+        "logo": {{ "/images/uptest-logo.png" | absolute_url | jsonify }}
+      },
+      "jobLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          {% if page.location_street %}"streetAddress": {{ page.location_street | jsonify }},{% endif %}
+          {% if page.location_city %}"addressLocality": {{ page.location_city | jsonify }},{% endif %}
+          {% if page.location_region %}"addressRegion": {{ page.location_region | jsonify }},{% endif %}
+          {% if page.location_postal %}"postalCode": {{ page.location_postal | jsonify }},{% endif %}
+          "addressCountry": {{ page.location_country | default: "NO" | jsonify }}
+        }
+      },
+      {% if page.remote %}
+      "jobLocationType": "TELECOMMUTE",
+      {% endif %}
+      {% if page.applicant_countries %}
+      "applicantLocationRequirements": [
+        {% for country in page.applicant_countries %}
+        { "@type": "Country", "name": {{ country | jsonify }} }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ],
+      {% endif %}
+      {% if page.salary_min or page.salary_max %}
+      "baseSalary": {
+        "@type": "MonetaryAmount",
+        "currency": {{ page.salary_currency | default: "EUR" | jsonify }},
+        "value": {
+          "@type": "QuantitativeValue",
+          {% if page.salary_min %}"minValue": {{ page.salary_min }},{% endif %}
+          {% if page.salary_max %}"maxValue": {{ page.salary_max }},{% endif %}
+          "unitText": {{ page.salary_unit | default: "MONTH" | jsonify }}
+        }
+      },
+      {% endif %}
+      "directApply": true
+    }
+    </script>
+    {% endif %}
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen m-0">
+
+    {% include header.html %}
+
+    <!-- Job Hero -->
+    <section class="relative bg-gradient-to-r from-brand-900 via-brand-800 to-brand-950 py-14 lg:py-20 text-white shadow-md">
+        <div class="absolute inset-0 bg-black/10 pointer-events-none"></div>
+        <div class="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
+            <div>
+                <a href="{{ site.baseurl }}/{{ career_link }}" class="inline-flex items-center gap-1.5 text-sm font-medium text-brand-200 hover:text-white transition-colors">
+                    <span aria-hidden="true">&larr;</span>
+                    {{ j.back_to_careers }}
+                </a>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight drop-shadow-sm text-white">
+                {{ page.title }}
+            </h1>
+
+            <div class="flex flex-wrap items-center gap-2.5 pt-1 text-xs sm:text-sm">
+                {% if location_text %}
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-brand-50 font-medium">
+                    {{ j.location }}: <strong class="text-white font-semibold">{{ location_text }}</strong>
+                </span>
+                {% endif %}
+
+                {% if emp_type_label %}
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-brand-50 font-medium">
+                    {{ j.employment_type }}: <strong class="text-white font-semibold">{{ emp_type_label }}</strong>
+                </span>
+                {% endif %}
+
+                {% if page.salary_display %}
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-brand-50 font-medium">
+                    {{ j.salary }}: <strong class="text-white font-semibold">{{ page.salary_display }}</strong>
+                </span>
+                {% endif %}
+
+                {% if page.date_posted %}
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-brand-50 font-medium">
+                    {{ j.posted }}: <time datetime="{{ page.date_posted | date: '%Y-%m-%d' }}" class="text-white font-semibold">{{ page.date_posted | date: "%Y-%m-%d" }}</time>
+                </span>
+                {% endif %}
+
+                {% if page.valid_through %}
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-brand-50 font-medium">
+                    {{ j.valid_through }}: <time datetime="{{ page.valid_through | date: '%Y-%m-%d' }}" class="text-white font-semibold">{{ page.valid_through | date: "%Y-%m-%d" }}</time>
+                </span>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Description & Apply CTA -->
+    <main class="flex-grow bg-white py-12 lg:py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 text-slate-700 leading-relaxed font-normal">
+
+            {% if page.active == false %}
+            <div class="p-4 sm:p-5 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 text-sm font-medium">
+                {{ j.closed_notice }}
+            </div>
+            {% endif %}
+
+            <article class="job-content">
+                {{ content }}
+            </article>
+
+            {% if page.active != false %}
+            <div class="bg-gradient-to-br from-brand-600 via-brand-600 to-brand-500 text-white rounded-2xl p-6 sm:p-8 space-y-4 shadow-lg shadow-brand-600/15 border border-brand-500 relative overflow-hidden">
+                <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">{{ j.apply_title }}</h2>
+                <p class="text-brand-50 text-base leading-relaxed max-w-xl">
+                    {{ page.apply_note | default: j.apply_desc }}
+                </p>
+
+                <div class="pt-2 flex flex-wrap items-center gap-3">
+                    <a href="mailto:{{ c.email }}?subject={{ page.title | uri_escape }}" class="inline-flex items-center justify-center px-6 py-3 rounded-xl font-bold text-sm text-white bg-brand-900 hover:bg-brand-800 shadow-md hover:shadow-lg transition-all border border-brand-700/60">
+                        {{ j.apply_btn }}
+                    </a>
+
+                    <a href="tel:{{ c.phone }}" aria-label="{{ c.phone_label }}" class="w-11 h-11 rounded-xl bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all border border-white/20 hover:border-white/40">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                    </a>
+
+                    <a href="{{ site.baseurl }}/{{ data.nav.contacts.link[page.lang] }}" class="inline-flex items-center justify-center px-4 py-3 rounded-xl font-semibold text-sm text-white bg-white/10 hover:bg-white/20 transition-all border border-white/20 hover:border-white/40">
+                        {{ data.nav.contacts.title[page.lang] }}
+                    </a>
+                </div>
+            </div>
+            {% endif %}
+
+        </div>
+    </main>
+
+    {% include footer.html %}
+
+</body>
+</html>

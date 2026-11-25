@@ -33,4 +33,27 @@ layout: null
   </url>
   {%- endfor %}
 {%- endfor %}
+{%- for job in site.jobs %}
+  {%- if job.active != false %}
+  <url>
+    <loc>{{ job.url | replace: 'index.html', '' | absolute_url }}</loc>
+    {%- if job.job_id %}
+      {%- assign peer_jobs = site.jobs | where: "job_id", job.job_id %}
+      {%- assign default_job_url = "" %}
+      {%- for alt in seo_data.languages %}
+        {%- assign peer = peer_jobs | where: "lang", alt.code | first %}
+        {%- if peer and peer.active != false %}
+          {%- assign alt_url = peer.url | replace: 'index.html', '' | absolute_url %}
+          {%- assign hreflang_code = alt.code %}{%- if alt.code == 'no' %}{% assign hreflang_code = 'nb' %}{% endif %}
+          {%- if alt.code == 'en' %}{% assign default_job_url = alt_url %}{% endif %}
+    <xhtml:link rel="alternate" hreflang="{{ hreflang_code }}" href="{{ alt_url }}" />
+        {%- endif %}
+      {%- endfor %}
+      {%- if default_job_url != "" %}
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ default_job_url }}" />
+      {%- endif %}
+    {%- endif %}
+  </url>
+  {%- endif %}
+{%- endfor %}
 </urlset>

@@ -1,2 +1,13 @@
 url: "https://uptest.no"
 baseurl: ""
+
+collections:
+  jobs:
+    output: true
+
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - tailwind.config.js
+  - _jobs/_template.md

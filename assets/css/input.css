@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .job-content h2 {
+    @apply text-xl sm:text-2xl font-bold text-slate-900 tracking-tight mt-8 mb-3 first:mt-0;
+  }
+  .job-content h3 {
+    @apply text-lg font-bold text-slate-900 mt-6 mb-2;
+  }
+  .job-content p {
+    @apply text-base text-slate-600 leading-relaxed mb-4;
+  }
+  .job-content ul {
+    @apply list-disc pl-5 space-y-2 text-base text-slate-600 mb-5;
+  }
+  .job-content ol {
+    @apply list-decimal pl-5 space-y-2 text-base text-slate-600 mb-5;
+  }
+  .job-content li {
+    @apply leading-relaxed;
+  }
+  .job-content strong {
+    @apply font-semibold text-slate-900;
+  }
+  .job-content a {
+    @apply text-brand-600 font-semibold hover:text-brand-800 underline;
+  }
+  .job-content hr {
+    @apply border-slate-100 my-8;
+  }
+}
