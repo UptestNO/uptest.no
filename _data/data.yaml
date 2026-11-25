@@ -16,8 +16,6 @@ common:
     language: "Language"
     company: "Uptest, UAB"
     rights: "All rights reserved."
-    rebuilt_by: "Rebuilt by"
-    old_version: "Old version"
     phone_label: "Phone"
     phone: "+37068889229"
     phone_formatted: "+370 (688) 89229"
@@ -33,8 +31,6 @@ common:
     language: "Kalba"
     company: "Uptest, UAB"
     rights: "Visos teisės saugomos."
-    rebuilt_by: "Atnaujino"
-    old_version: "Senoji versija"
     phone_label: "Telefonas"
     phone: "+37068889229"
     phone_formatted: "+370 (688) 89229"
@@ -50,8 +46,6 @@ common:
     language: "Språk"
     company: "Uptest, NUF"
     rights: "Alle rettigheter reservert."
-    rebuilt_by: "Gjenoppbygd av"
-    old_version: "Gammel versjon"
     phone_label: "Telefon"
     phone: "+37068889229"
     phone_formatted: "+370 (688) 89229"
@@ -63,13 +57,6 @@ common:
     get_in_touch: "Ta kontakt"
     standards: "Standarder"
 
-
-home:
-  title:
-    en: "Uptest | NDT & Rope Access Inspections"
-    lt: "Uptest | Neardomoji kontrolė ir darbai aukštyje"
-    "no": "Uptest | NDT & Tilkomstteknikk Kontroll"
-    
 nav:
   about:
     title:

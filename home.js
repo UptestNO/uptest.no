@@ -3,7 +3,6 @@
         const slideTexts = document.querySelectorAll('.slide-text');
         const prevBtns = document.querySelectorAll('.prev-slide-btn');
         const nextBtns = document.querySelectorAll('.next-slide-btn');
-        const pauseBtns = document.querySelectorAll('.pause-slide-btn');
         
         const currentNumEls = document.querySelectorAll('.current-num');
         const totalNumEls = document.querySelectorAll('.total-num');
@@ -84,24 +83,7 @@
                 nextSlide();
                 resetTimer();
             }
-
-            pauseBtns.forEach(btn => {
-                const pauseIcon = btn.querySelector('.pause-icon');
-                const playIcon = btn.querySelector('.play-icon');
-                if (!pauseIcon || !playIcon) return;
-                if (isPaused) {
-                    pauseIcon.classList.add('hidden');
-                    playIcon.classList.remove('hidden');
-                } else {
-                    pauseIcon.classList.remove('hidden');
-                    playIcon.classList.add('hidden');
-                }
-            });
         }
-
-        pauseBtns.forEach(btn => {
-            btn.addEventListener('click', togglePlayPause);
-        });
 
         nextBtns.forEach(btn => {
             btn.addEventListener('click', () => {
