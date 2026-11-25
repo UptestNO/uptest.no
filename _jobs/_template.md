@@ -17,7 +17,9 @@ summary: "Join our offshore and industrial inspection team performing certified 
 
 date_posted: "2026-11-25"             # Required by Google Jobs (YYYY-MM-DD)
 valid_through: "2027-02-25"           # Recommended by Google Jobs (YYYY-MM-DD)
-employment_type: "FULL_TIME"          # FULL_TIME, PART_TIME, CONTRACTOR, TEMPORARY, INTERN
+employment_type: "FULL_TIME"          # FULL_TIME, PART_TIME, CONTRACTOR, TEMPORARY, INTERN (or array: ["CONTRACTOR", "FULL_TIME"])
+# employment_type_display: "Project-based (Full-time possible)" # Optional custom label shown on the page
+# og_image_alt: "Custom OG image description"                   # Optional (defaults to title)
 
 location_display: "Norway / Offshore" # Shown on the page & job card
 location_city: "Stavanger"            # Google Jobs PostalAddress.addressLocality
