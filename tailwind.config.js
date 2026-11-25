@@ -3,14 +3,8 @@ module.exports = {
     content: [
       "./_layouts/**/*.html",
       "./_includes/**/*.html",
-      "./*.html",
-      "./*.md",
-      "./lt/**/*.html",
-      "./lt/**/*.md",
-      "./no/**/*.html",
-      "./no/**/*.md",
-      "./en/**/*.html",
-      "./en/**/*.md"
+      "./*.{html,md}",
+      "./!(node_modules|_site)/**/*.{html,md}"
     ],
     theme: {
       extend: {
