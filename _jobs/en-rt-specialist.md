@@ -7,21 +7,21 @@ active: true
 
 title: "RT (Radiography Testing) Specialist"
 meta_title: "RT (Radiography Testing) Specialist – Norway Offshore | Uptest Careers"
-summary: "Experienced Radiography Testing (RT) specialist for industrial and offshore oil platform projects in Norway (Bergen & Stavanger regions)."
+summary: "Experienced Radiography Testing (RT) specialist for industrial and offshore oil platform projects in Norway (Bergen, Stavanger)."
 
 date_posted: "2026-11-25"
 valid_through: "2027-02-25"
 employment_type: ["CONTRACTOR", "FULL_TIME"]
 employment_type_display: "Project-based (Full-time possible)"
 
-location_display: "Norway, Offshore (Bergen & Stavanger regions)"
+location_display: "Norway, Offshore (Bergen, Stavanger)"
 location_city: "Bergen, Stavanger"
 location_country: "NO"
 ---
 
 ## About the Position
 
-We are looking for an experienced Radiography Testing (RT) specialist to work on industrial and offshore oil platform facilities in Norway (Bergen and Stavanger regions).
+We are looking for an experienced Radiography Testing (RT) specialist to work on industrial and offshore oil platform facilities in Norway (Bergen, Stavanger).
 
 We primarily operate on a project-based schedule, while remaining open to permanent, long-term employment for reliable and highly qualified candidates.
 
