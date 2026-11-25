@@ -11,13 +11,36 @@
     <meta name="description" content="{{ meta_desc }}">
     {% endif %}
 
+    {% assign canonical_url = page.url | replace: 'index.html', '' | absolute_url %}
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    {% assign seo_data = site.data.data %}
+    {% assign default_alt_url = "" %}
+    {% for lang in seo_data.languages %}
+        {% assign alt_link = lang.link %}
+        {% if page.current_page %}
+            {% assign nav_match = seo_data.nav[page.current_page] %}
+            {% if nav_match and nav_match.link[lang.code] %}
+                {% assign alt_link = nav_match.link[lang.code] %}
+            {% endif %}
+        {% endif %}
+        {% assign alt_url = alt_link | prepend: '/' | replace: '//', '/' | absolute_url %}
+        {% assign hreflang_code = lang.code %}
+        {% if lang.code == 'no' %}{% assign hreflang_code = 'nb' %}{% endif %}
+        {% if lang.code == 'en' %}{% assign default_alt_url = alt_url %}{% endif %}
+    <link rel="alternate" hreflang="{{ hreflang_code }}" href="{{ alt_url }}">
+    {% endfor %}
+    {% if default_alt_url != "" %}
+    <link rel="alternate" hreflang="x-default" href="{{ default_alt_url }}">
+    {% endif %}
+
     <!-- Open Graph / Social Media Žymos -->
     <meta property="og:title" content="{{ page.og_title | default: page.title }}">
     {% if og_desc %}
     <meta property="og:description" content="{{ og_desc }}">
     {% endif %}
     <meta property="og:image" content="{{ page.og_image | absolute_url }}">
-    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:url" content="{{ canonical_url }}">
     <meta property="og:type" content="{{ page.og_type | default: 'website' }}">
     <meta property="og:site_name" content="Uptest">
     <meta property="og:locale" content="{% if page.lang == 'lt' %}lt_LT{% elsif page.lang == 'no' %}nb_NO{% else %}en_US{% endif %}">

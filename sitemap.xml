@@ -1,0 +1,36 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{%- assign seo_data = site.data.data -%}
+{%- for lang in seo_data.languages %}
+  {%- assign loc_url = lang.link | prepend: '/' | replace: '//', '/' | absolute_url %}
+  <url>
+    <loc>{{ loc_url }}</loc>
+    {%- for alt in seo_data.languages %}
+      {%- assign alt_url = alt.link | prepend: '/' | replace: '//', '/' | absolute_url %}
+      {%- assign hreflang_code = alt.code %}{%- if alt.code == 'no' %}{% assign hreflang_code = 'nb' %}{% endif %}
+    <xhtml:link rel="alternate" hreflang="{{ hreflang_code }}" href="{{ alt_url }}" />
+    {%- endfor %}
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ '/' | absolute_url }}" />
+  </url>
+{%- endfor %}
+{%- for nav_item in seo_data.nav %}
+  {%- assign item = nav_item[1] %}
+  {%- assign en_url = item.link.en | prepend: '/' | replace: '//', '/' | absolute_url %}
+  {%- for lang in seo_data.languages %}
+    {%- assign loc_url = item.link[lang.code] | prepend: '/' | replace: '//', '/' | absolute_url %}
+  <url>
+    <loc>{{ loc_url }}</loc>
+    {%- for alt in seo_data.languages %}
+      {%- assign alt_url = item.link[alt.code] | prepend: '/' | replace: '//', '/' | absolute_url %}
+      {%- assign hreflang_code = alt.code %}{%- if alt.code == 'no' %}{% assign hreflang_code = 'nb' %}{% endif %}
+    <xhtml:link rel="alternate" hreflang="{{ hreflang_code }}" href="{{ alt_url }}" />
+    {%- endfor %}
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ en_url }}" />
+  </url>
+  {%- endfor %}
+{%- endfor %}
+</urlset>
