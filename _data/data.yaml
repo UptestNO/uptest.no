@@ -21,6 +21,7 @@ common:
     phone_formatted: "+370 (688) 89229"
     email_label: "E-mail"
     email: "info@uptest.no"
+    career_email: "cv@uptest.no"
     hq_label: "Headquarters"
     hq: "Palanga, Lithuania"
     hq_link: "https://maps.app.goo.gl/hGXkK35Qdv2JQvNU6"
@@ -36,6 +37,7 @@ common:
     phone_formatted: "+370 (688) 89229"
     email_label: "El. paštas"
     email: "info@uptest.no"
+    career_email: "cv@uptest.no"
     hq_label: "Pagrindinis biuras"
     hq: "Palanga, Lietuva"
     hq_link: "https://maps.app.goo.gl/hGXkK35Qdv2JQvNU6"
@@ -51,6 +53,7 @@ common:
     phone_formatted: "+370 (688) 89229"
     email_label: "E-post"
     email: "info@uptest.no"
+    career_email: "cv@uptest.no"
     hq_label: "Hovedkontor"
     hq: "Palanga, Litauen"
     hq_link: "https://maps.app.goo.gl/hGXkK35Qdv2JQvNU6"
@@ -301,7 +304,6 @@ jobs:
   en:
     section_title: "Open Positions"
     view_position: "View position"
-    back_to_careers: "Back to Careers"
     location: "Location"
     employment_type: "Type"
     posted: "Posted"
@@ -320,7 +322,6 @@ jobs:
   lt:
     section_title: "Atviros pozicijos"
     view_position: "Peržiūrėti poziciją"
-    back_to_careers: "Grįžti į karjerą"
     location: "Vieta"
     employment_type: "Darbo pobūdis"
     posted: "Paskelbta"
@@ -339,7 +340,6 @@ jobs:
   "no":
     section_title: "Ledige stillinger"
     view_position: "Se stilling"
-    back_to_careers: "Tilbake til karriere"
     location: "Arbeidssted"
     employment_type: "Ansettelsesform"
     posted: "Publisert"
