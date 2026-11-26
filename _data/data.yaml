@@ -206,7 +206,7 @@ slides:
       en: "about-us/"
       lt: "apie-mus/"
       "no": "om-oss/"
-    image: "/images/uptest-neardomoji-kontrole-1.jpg"
+    image: "/images/uptest-neardomoji-kontrole-1.webp"
 
   ndt:
     badge:
@@ -229,7 +229,7 @@ slides:
       en: "non-destructive-testing/"
       lt: "neardomoji-kontrole/"
       "no": "ikke-destruktiv-proving/"
-    image: "/images/uptest-neardomoji-kontrole-6.jpg"
+    image: "/images/uptest-neardomoji-kontrole-6.webp"
 
   rope:
     badge:
@@ -252,7 +252,7 @@ slides:
       en: "rope-access/"
       lt: "darbai-aukstyje/"
       "no": "tilkomstteknikk/"
-    image: "/images/uptest-neardomoji-kontrole-5.jpg"
+    image: "/images/uptest-neardomoji-kontrole-5.webp"
       
   equipment:
     badge:
@@ -275,7 +275,7 @@ slides:
       en: "equipment/"
       lt: "nk-iranga-irangos-nuoma/"
       "no": "ndt-utstyr/"
-    image: "/images/uptest-neardomoji-kontrole-8.jpg"
+    image: "/images/uptest-neardomoji-kontrole-8.webp"
 
   career:
     badge:
@@ -298,7 +298,7 @@ slides:
       en: "career/"
       lt: "karjera/"
       "no": "karriere/"
-    image: "/images/uptest-neardomoji-kontrole-3.jpg"
+    image: "/images/uptest-neardomoji-kontrole-3.webp"
 
 jobs:
   en:

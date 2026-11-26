@@ -20,7 +20,11 @@
         {% for slide_item in site_data.slides %}
           {% assign slide = slide_item[1] %}
           <div class="bg-slide absolute inset-0 {% if forloop.first %}opacity-100{% else %}opacity-0{% endif %} transition-opacity duration-700 ease-in-out">
-              <img src="{{ slide.image }}" class="w-full h-full object-cover object-center brightness-[0.95] contrast-[1.05]" alt="{{ slide.title[page.lang] }}">
+              {% if forloop.first %}
+              <img src="{{ slide.image }}" fetchpriority="high" decoding="async" class="w-full h-full object-cover object-center brightness-[0.95] contrast-[1.05]" alt="{{ slide.title[page.lang] }}">
+              {% else %}
+              <img data-src="{{ slide.image }}" loading="lazy" decoding="async" class="w-full h-full object-cover object-center brightness-[0.95] contrast-[1.05]" alt="{{ slide.title[page.lang] }}">
+              {% endif %}
           </div>
         {% endfor %}
 
@@ -133,7 +137,7 @@
                         </div>
                     </div>
                     <div class="absolute right-0 top-0 bottom-0 w-14 sm:w-28 bg-brand-950/30 group-hover:bg-brand-950/45 transition-colors flex items-center justify-center border-l border-brand-700/35">
-                        <img src="{{ site.baseurl }}/{{ card.image }}" alt="{{ card.title[page.lang] }}" class="w-9 h-9 sm:w-20 sm:h-20 opacity-95 group-hover:opacity-100 group-hover:scale-110 transition-all object-contain drop-shadow-sm">
+                        <img src="{{ site.baseurl }}/{{ card.image }}" alt="{{ card.title[page.lang] }}" decoding="async" class="w-9 h-9 sm:w-20 sm:h-20 opacity-95 group-hover:opacity-100 group-hover:scale-110 transition-all object-contain drop-shadow-sm">
                     </div>
                 </a>
                 {% endfor %}

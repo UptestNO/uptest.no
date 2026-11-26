@@ -17,7 +17,26 @@
 
         totalNumEls.forEach(el => el.textContent = String(bgSlides.length).padStart(2, '0'));
 
+        function loadSlideImage(index) {
+            const slide = bgSlides[index];
+            if (!slide) return;
+            const img = slide.querySelector('img[data-src]');
+            if (img) {
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+            }
+        }
+
+        function preloadAdjacentSlides(index) {
+            if (!bgSlides.length) return;
+            loadSlideImage((index + 1) % bgSlides.length);
+            loadSlideImage((index - 1 + bgSlides.length) % bgSlides.length);
+        }
+
         function updateSlideClasses() {
+            loadSlideImage(currentSlide);
+            preloadAdjacentSlides(currentSlide);
+
             bgSlides.forEach((slide, index) => {
                 slide.classList.toggle('opacity-100', index === currentSlide);
                 slide.classList.toggle('opacity-0', index !== currentSlide);
@@ -105,6 +124,12 @@
                 if (e.target.closest('a') || e.target.closest('button')) return;
                 togglePlayPause();
             });
+        }
+
+        if (document.readyState === 'complete') {
+            preloadAdjacentSlides(currentSlide);
+        } else {
+            window.addEventListener('load', () => preloadAdjacentSlides(currentSlide), { once: true });
         }
 
         slideTimer = setInterval(nextSlide, slideIntervalTime);
