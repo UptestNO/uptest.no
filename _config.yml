@@ -10,4 +10,10 @@ exclude:
   - package.json
   - package-lock.json
   - tailwind.config.js
+  - assets/css/input.css
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .bundle
   - _jobs/_template.md

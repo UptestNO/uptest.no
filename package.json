@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --minify"
+    "build": "tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --minify",
+    "watch": "tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --watch --minify",
+    "serve": "bundle exec jekyll serve --livereload",
+    "jekyll:build": "bundle exec jekyll build",
+    "dev": "npm run build && sh -c 'npm run watch & CSS_PID=$!; trap \"kill $CSS_PID 2>/dev/null\" EXIT INT TERM; bundle exec jekyll serve --livereload'"
   },
   "keywords": [],
   "author": "",

@@ -3,8 +3,8 @@ module.exports = {
     content: [
       "./_layouts/**/*.html",
       "./_includes/**/*.html",
-      "./*.{html,md}",
-      "./!(node_modules|_site)/**/*.{html,md}"
+      "./*.html",
+      "./!(node_modules|_site|vendor|.bundle|.jekyll-cache)/**/*.{html,md}"
     ],
     theme: {
       extend: {

@@ -17,4 +17,16 @@ Icon
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
 .DS_Store
-node_modules
+
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler / Ruby
+vendor/
+.bundle/
+
+# Node
+node_modules/
