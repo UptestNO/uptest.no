@@ -40,6 +40,47 @@
 @tailwind utilities;
 
 @layer components {
+  .page-lead {
+    @apply text-xl font-normal text-slate-800 leading-relaxed;
+  }
+  .brand-highlight {
+    @apply font-semibold bg-brand-50 px-1.5 py-0.5 rounded text-brand-800;
+  }
+  .page-divider {
+    @apply border-slate-100 my-8;
+  }
+  .section-heading {
+    @apply text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight;
+  }
+  .info-panel {
+    @apply bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm;
+  }
+  .feature-card {
+    @apply bg-white rounded-2xl p-6 border border-slate-200/80 hover:border-brand-500 hover:shadow-lg transition-all duration-300;
+  }
+  .feature-card-lg {
+    @apply bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 hover:border-brand-500 hover:shadow-lg transition-all duration-300;
+  }
+  .feature-card-title {
+    @apply text-lg font-bold text-slate-900 transition-colors;
+  }
+  .feature-card-lg .feature-card-title {
+    @apply text-xl;
+  }
+  .feature-card:hover .feature-card-title,
+  .feature-card-lg:hover .feature-card-title {
+    @apply text-brand-600;
+  }
+  .feature-card-link {
+    @apply inline-flex items-center text-sm font-semibold text-brand-600 hover:text-brand-800 transition-colors;
+  }
+  .feature-card-arrow {
+    @apply ml-1 transition-transform;
+  }
+  .feature-card:hover .feature-card-arrow {
+    @apply translate-x-1;
+  }
+
   .job-content h2 {
     @apply text-xl sm:text-2xl font-bold text-slate-900 tracking-tight mt-8 mb-3 first:mt-0;
   }

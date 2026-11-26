@@ -358,3 +358,72 @@ jobs:
       CONTRACTOR: "Prosjekt / rotasjon"
       TEMPORARY: "Midlertidig"
       INTERN: "Praksis"
+
+company:
+  director: "Andrius Ežerskis"
+  legal_name: 'UAB “Uptest”'
+  company_id_lt: "304412958"
+  org_no_no: "922 319 413"
+  vat_no_no: "922 319 413 MVA"
+
+contacts_page:
+  en:
+    intro_title: "Get in Touch With Us"
+    intro_desc: "Contact our team for professional NDT inspection services, equipment rentals, project consultations, or career applications across Lithuania and Norway."
+    phone_action: "Call us directly"
+    email_action: "Send a message"
+    hq_action: "Open in Google Maps"
+    offices_title: "Our Offices"
+    offices:
+      - name: "Palanga Headquarters"
+        address: "Vanagupes st. 22-31, LT-00172 Palanga, Lithuania"
+      - name: "Vilnius Office"
+        address: "Pulko str. 3–151, LT-08221 Vilnius, Lithuania"
+    director_label: "Director:"
+    details_title: "Company Details & Registration"
+    labels:
+      org_no_no: "Uptest NUF (Norway) Org. No."
+      vat_no_no: "Norwegian VAT No."
+      legal_name: "Legal Name"
+      company_id_lt: "Lithuanian Company ID"
+    details_note: "Official registered entity operating under Lithuanian and Norwegian jurisdictions for professional NDT and inspection services."
+  lt:
+    intro_title: "Susisiekite su mumis"
+    intro_desc: "Susisiekite su mūsų komanda dėl profesionalių NDT patikros paslaugų, įrangos nuomos, projektų konsultacijų ar karjeros galimybių Lietuvoje ir Norvegijoje."
+    phone_action: "Skambinkite mums tiesiogiai"
+    email_action: "Siųsti žinutę"
+    hq_action: "Atidaryti „Google Maps“"
+    offices_title: "Mūsų biurai"
+    offices:
+      - name: "Palangos būstinė"
+        address: "Vanagupės g. 22-31, LT-00172 Palanga, Lietuva"
+      - name: "Vilniaus biuras"
+        address: "Pulko g. 3–151, LT-08221 Vilnius, Lietuva"
+    director_label: "Vadovas:"
+    details_title: "Įmonės rekvizitai ir registracija"
+    labels:
+      legal_name: "Teisinis pavadinimas"
+      company_id_lt: "Įmonės kodas"
+      org_no_no: "„Uptest NUF“ (Norvegija) Org. Nr."
+      vat_no_no: "Norvegijos PVM kodas"
+    details_note: "Oficialus registruotas subjektas, teikiantis profesionalias NDT ir patikros paslaugas pagal Lietuvos ir Norvegijos jurisdikcijas."
+  "no":
+    intro_title: "Ta kontakt med oss"
+    intro_desc: "Kontakt teamet vårt for profesjonelle NDT-inspeksjonstjenester, utleie av utstyr, prosjektkonsultasjoner eller karrieremuligheter i Litauen og Norge."
+    phone_action: "Ring oss direkte"
+    email_action: "Send en melding"
+    hq_action: "Åpne i Google Maps"
+    offices_title: "Våre kontorer"
+    offices:
+      - name: "Hovedkontor i Palanga"
+        address: "Vanagupės g. 22-31, LT-00172 Palanga, Litauen"
+      - name: "Kontor i Vilnius"
+        address: "Pulko g. 3–151, LT-08221 Vilnius, Litauen"
+    director_label: "Daglig leder:"
+    details_title: "Foretaksdetaljer og registrering"
+    labels:
+      org_no_no: "Uptest NUF (Norge) Org. nr."
+      vat_no_no: "Norsk MVA-nummer"
+      legal_name: "Juridisk navn"
+      company_id_lt: "Litauisk organisasjonsnummer"
+    details_note: "Offisielt registrert foretak som opererer under litauisk og norsk jurisdiksjon for profesjonelle NDT- og inspeksjonstjenester."

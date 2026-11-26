@@ -11,7 +11,7 @@ og_image_width: 1672
 og_image_height: 941
 og_type: "website"
 ---
-<p class="text-xl font-normal text-slate-800 leading-relaxed">
+<p class="page-lead">
     Uptest er spesialisert innen ikke-destruktiv testing (visuell kontroll, virvelstrømkontroll, magnetpulverkontroll, ultralydkontroll og penetrantkontroll), samt arbeid i høyden og industriell tilgjøring med tau.
 </p>
 
@@ -55,69 +55,64 @@ og_type: "website"
     </ul>
 </div>
 
-<hr class="border-slate-100 my-8">
+<hr class="page-divider">
 
 <div class="space-y-8">
-    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+    <h2 class="section-heading">
         Utforsk våre tjenester og muligheter
     </h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- NDT -->
-        <div class="bg-white rounded-2xl p-6 border border-slate-200/80 hover:border-brand-500 hover:shadow-lg transition-all duration-300 flex flex-col justify-between space-y-4 group">
+        <div class="feature-card flex flex-col justify-between space-y-4">
             <div class="space-y-2">
-                <h3 class="text-lg font-bold text-slate-900 group-hover:text-brand-600 transition-colors">Ikke-destruktiv testing (NDT)</h3>
+                <h3 class="feature-card-title">Ikke-destruktiv testing (NDT)</h3>
                 <p class="text-sm text-slate-600 leading-relaxed">Omfattende NDT-inspeksjonsmetoder for å vurdere materialintegritet uten skade.</p>
             </div>
             <div>
-                <a href="/no/ikke-destruktiv-proving/" class="inline-flex items-center text-sm font-semibold text-brand-600 hover:text-brand-800 transition-colors">
-                    Les mer <span class="ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span>
+                <a href="/no/ikke-destruktiv-proving/" class="feature-card-link">
+                    Les mer <span class="feature-card-arrow">&rarr;</span>
                 </a>
             </div>
         </div>
 
-        <!-- Rope Access -->
-        <div class="bg-white rounded-2xl p-6 border border-slate-200/80 hover:border-brand-500 hover:shadow-lg transition-all duration-300 flex flex-col justify-between space-y-4 group">
+        <div class="feature-card flex flex-col justify-between space-y-4">
             <div class="space-y-2">
-                <h3 class="text-lg font-bold text-slate-900 group-hover:text-brand-600 transition-colors">Industriell klatring</h3>
+                <h3 class="feature-card-title">Industriell klatring</h3>
                 <p class="text-sm text-slate-600 leading-relaxed">Sikre og effektive løsninger for arbeid i høyden ved hjelp av industriell tilgjøring med tau.</p>
             </div>
             <div>
-                <a href="/no/tilkomstteknikk/" class="inline-flex items-center text-sm font-semibold text-brand-600 hover:text-brand-800 transition-colors">
-                    Les mer <span class="ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span>
+                <a href="/no/tilkomstteknikk/" class="feature-card-link">
+                    Les mer <span class="feature-card-arrow">&rarr;</span>
                 </a>
             </div>
         </div>
 
-        <!-- Equipment Rental -->
-        <div class="bg-white rounded-2xl p-6 border border-slate-200/80 hover:border-brand-500 hover:shadow-lg transition-all duration-300 flex flex-col justify-between space-y-4 group">
+        <div class="feature-card flex flex-col justify-between space-y-4">
             <div class="space-y-2">
-                <h3 class="text-lg font-bold text-slate-900 group-hover:text-brand-600 transition-colors">Utleie av NDT-utstyr</h3>
+                <h3 class="feature-card-title">Utleie av NDT-utstyr</h3>
                 <p class="text-sm text-slate-600 leading-relaxed">Pålitelig og kalibrert inspeksjonsutstyr tilgjengelig for fleksible leieperioder.</p>
             </div>
             <div>
-                <a href="/no/ndt-utstyr/" class="inline-flex items-center text-sm font-semibold text-brand-600 hover:text-brand-800 transition-colors">
-                    Les mer <span class="ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span>
+                <a href="/no/ndt-utstyr/" class="feature-card-link">
+                    Les mer <span class="feature-card-arrow">&rarr;</span>
                 </a>
             </div>
         </div>
 
-        <!-- Career -->
-        <div class="bg-white rounded-2xl p-6 border border-slate-200/80 hover:border-brand-500 hover:shadow-lg transition-all duration-300 flex flex-col justify-between space-y-4 group">
+        <div class="feature-card flex flex-col justify-between space-y-4">
             <div class="space-y-2">
-                <h3 class="text-lg font-bold text-slate-900 group-hover:text-brand-600 transition-colors">Jobb og karriere</h3>
+                <h3 class="feature-card-title">Jobb og karriere</h3>
                 <p class="text-sm text-slate-600 leading-relaxed">Bli en del av vårt voksende team med sertifiserte spesialister og sikkerhetsfokuserte fagfolk.</p>
             </div>
             <div>
-                <a href="/no/karriere/" class="inline-flex items-center text-sm font-semibold text-brand-600 hover:text-brand-800 transition-colors">
-                    Les mer <span class="ml-1 group-hover:translate-x-1 transition-transform">&rarr;</span>
+                <a href="/no/karriere/" class="feature-card-link">
+                    Les mer <span class="feature-card-arrow">&rarr;</span>
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- Call to Action -->
-    {% include cta-box.html 
+    {% include cta-box.html
         title="Klar til å jobbe med oss?"
         description="Enten du trenger eksperthjelp til inspeksjon, utleie av utstyr, eller ønsker å bli en del av teamet vårt, ta kontakt med Uptest i dag."
         btn_text="Kontakt oss"
