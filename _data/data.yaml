@@ -427,3 +427,122 @@ contacts_page:
       legal_name: "Juridisk navn"
       company_id_lt: "Litauisk organisasjonsnummer"
     details_note: "Offisielt registrert foretak som opererer under litauisk og norsk jurisdiksjon for profesjonelle NDT- og inspeksjonstjenester."
+
+gallery_ui:
+  en:
+    empty: "No photos found in folder:"
+    close: "Close image preview"
+    prev: "Previous photo"
+    next: "Next photo"
+    open_prefix: "View photo:"
+    default_alt:
+      gallery: "Uptest – NDT & Rope Access inspection photo"
+      certificates: "Uptest – NDT & Rope Access qualification certificate"
+  lt:
+    empty: "Nuotraukų kataloge nerasta:"
+    close: "Uždaryti nuotraukos peržiūrą"
+    prev: "Ankstesnė nuotrauka"
+    next: "Kita nuotrauka"
+    open_prefix: "Peržiūrėti nuotrauką:"
+    default_alt:
+      gallery: "Uptest – NDT ir darbų aukštyje nuotrauka"
+      certificates: "Uptest – NDT ir darbų aukštyje kvalifikacijos sertifikatas"
+  "no":
+    empty: "Ingen bilder funnet i mappen:"
+    close: "Lukk bildevisning"
+    prev: "Forrige bilde"
+    next: "Neste bilde"
+    open_prefix: "Se bilde:"
+    default_alt:
+      gallery: "Uptest – NDT og tilkomstteknikk bilde"
+      certificates: "Uptest – NDT og tilkomstteknikk sertifikat"
+
+# Pasirenkami tikslūs alt aprašymai pagal failo vardą be plėtinio (veikia tiek su .jpg, tiek su .webp)
+gallery_captions:
+  # Sertifikatai
+  01-uptest-iso-9001-dnv-gl-certificate:
+    en: "UAB Uptest ISO 9001:2015 Quality Management System Certificate issued by DNV GL"
+    lt: "UAB „Uptest“ ISO 9001:2015 kokybės vadybos sistemos sertifikatas (DNV GL)"
+    "no": "UAB Uptest ISO 9001:2015 sertifikat for kvalitetsstyringssystem utstedt av DNV GL"
+  02-uptest-irata-level-3-rope-access-certificate:
+    en: "IRATA International Level 3 Rope Access Technician Certificate"
+    lt: "IRATA International 3 lygio pramoninio alpinizmo techniko sertifikatas"
+    "no": "IRATA International nivå 3 sertifikat for tilkomsttekniker"
+  03-uptest-soft-ns-9600-class-a-safety-supervisor:
+    en: "SOFT Sertifisering NS 9600-1 Class A Safety Supervisor Rope Access Certificate"
+    lt: "SOFT Sertifisering NS 9600-1 A klasės saugos vadovo pramoninio alpinizmo sertifikatas"
+    "no": "SOFT Sertifisering NS 9600-1 Klasse A sikringsleder sertifikat for tilkomstteknikk"
+  04-uptest-iso-9712-ut-level-2-certificate:
+    en: "EN ISO 9712 Ultrasonic Testing (UT Level 2) NDT Certificate issued by Inspecta"
+    lt: "EN ISO 9712 ultragarsinės kontrolės (UT 2 lygis) NDT sertifikatas (Inspecta)"
+    "no": "EN ISO 9712 ultralydtesting (UT nivå 2) NDT-sertifikat utstedt av Inspecta"
+  05-uptest-ndt-visual-inspection-vt-level-2:
+    en: "Lavender International NDT Visual Inspection (VT Level 2, PCN) Certificate of Training"
+    lt: "Lavender International NDT vizualinės kontrolės (VT 2 lygis, PCN) mokymų sertifikatas"
+    "no": "Lavender International NDT visuell inspeksjon (VT nivå 2, PCN) kursbevis"
+  06-uptest-ndt-magnetic-particle-mt-level-2:
+    en: "Lavender International NDT Magnetic Particle Inspection (MT Level 2, PCN) Certificate of Training"
+    lt: "Lavender International NDT magnetinių dalelių kontrolės (MT 2 lygis, PCN) mokymų sertifikatas"
+    "no": "Lavender International NDT magnetpulverkontroll (MT nivå 2, PCN) kursbevis"
+  07-uptest-ndt-liquid-penetrant-pt-level-2:
+    en: "Lavender International NDT Liquid Penetrant Inspection (PT Level 2, PCN) Certificate of Training"
+    lt: "Lavender International NDT skvarbiųjų medžiagų kontrolės (PT 2 lygis, PCN) mokymų sertifikatas"
+    "no": "Lavender International NDT penetrantkontroll (PT nivå 2, PCN) kursbevis"
+  08-uptest-ndt-eddy-current-et-level-2:
+    en: "Lavender International NDT Eddy Current Inspection – Welds (ET Level 2, PCN) Certificate of Training"
+    lt: "Lavender International NDT sūkurinių srovių suvirinimo siūlių kontrolės (ET 2 lygis, PCN) sertifikatas"
+    "no": "Lavender International NDT virvelstrømskontroll av sveiser (ET nivå 2, PCN) kursbevis"
+  09-uptest-bp-hms-offshore-safety-diploma:
+    en: "BP HMS Verification Offshore Safety & HSE Directives Diploma"
+    lt: "BP HMS jūrinės saugos ir HSE direktyvų patikros diplomas"
+    "no": "BP HMS-verifisering diplom for offshore sikkerhetsdirektiver"
+
+  # Darbų galerija
+  01-offshore-rope-access-steel-structure-inspection:
+    en: "Two Uptest rope access specialists performing NDT inspection on an offshore steel structure above open sea"
+    lt: "Du „Uptest“ aukštalipiai atlieka neardomosios kontrolės patikrą ant jūrinės plieno konstrukcijos virš jūros"
+    "no": "To Uptest tilkomstteknikere utfører NDT-inspeksjon på en offshore stålkonstruksjon over åpent hav"
+  02-ndt-inspection-rope-access-pipework:
+    en: "NDT technician operating an inspection instrument while suspended in rope access harness inside industrial pipework"
+    lt: "NDT specialistas atlieka patikrą prietaisu pramoninių vamzdynų zonoje dirbdamas aukštyje su virvėmis"
+    "no": "NDT-inspektør utfører målinger med inspeksjonsinstrument i tilkomstteknikk-sele blant industrirør"
+  03-offshore-ndt-weld-inspection-rope-access:
+    en: "Rope access NDT inspector examining welds on an offshore platform structure"
+    lt: "Aukštalipis NDT inspektorius tikrina suvirinimo siūles ant jūrinės platformos konstrukcijos"
+    "no": "NDT-inspektør i tau utfører sveisekontroll på en offshoreplattformkonstruksjon"
+  04-offshore-crane-boom-rope-access-inspection:
+    en: "Industrial rope access technician inspecting an offshore structure boom above the sea"
+    lt: "Pramoninio alpinizmo specialistas atlieka jūrinės konstrukcijos patikrą aukštyje virš jūros"
+    "no": "Tilkomsttekniker inspiserer en offshorekonstruksjon i høyden over havet"
+  05-ndt-eddy-current-weld-inspection-closeup:
+    en: "Close-up of non-destructive weld testing on a coated offshore steel beam"
+    lt: "Neardomosios kontrolės suvirinimo siūlės patikra per dažytą jūrinės konstrukcijos dangą iš arti"
+    "no": "Nærbilde av ikke-destruktiv sveisekontroll på malt offshore stålkonstruksjon"
+  06-magnetic-particle-testing-mt-flange:
+    en: "Magnetic particle testing (MT) using an electromagnetic yoke on an industrial pipe flange"
+    lt: "Magnetinių dalelių kontrolė (MT) elektromagnetiniu jungu ant pramoninio vamzdžio flanšo"
+    "no": "Magnetpulvertesting (MT) med elektromagnetisk åk på en industrirørflens"
+  07-offshore-platform-exterior-rope-access-team:
+    en: "Three rope access technicians working safely along the exterior of an offshore platform above the ocean"
+    lt: "Trys aukštalipiai saugiai dirba išorinėje jūrinės platformos pusėje virš atviros jūros"
+    "no": "Tre tilkomstteknikere arbeider trygt langs utsiden av en offshoreplattform over havet"
+  08-offshore-derrick-rope-access-maintenance:
+    en: "Rope access specialist in full protective gear working high on an offshore platform derrick above the helideck"
+    lt: "Aukštalipis su pilna apsaugine įranga dirba jūrinės platformos bokšte virš sraigtasparnių aikštelės"
+    "no": "Tilkomsttekniker i fullt verneutstyr arbeider høyt i boretårnet på en offshoreplattform over helidekket"
+  09-offshore-rigging-rope-access-teamwork:
+    en: "Offshore rope access and rigging team coordinating structural work beneath a platform deck"
+    lt: "Jūrinės platformos aukštalipių ir montuotojų komanda atlieka konstrukcijų darbus po deniu"
+    "no": "Offshore tilkomstteknikk- og riggeteam koordinerer konstruksjonsarbeid under plattformdekket"
+  10-offshore-rope-access-above-supply-vessel:
+    en: "Rope access technicians carrying out elevated work on an offshore platform overlooking a supply vessel"
+    lt: "Aukštalipiai atlieka darbus jūrinėje platformoje virš aprūpinimo laivo"
+    "no": "Tilkomstteknikere utfører arbeid i høyden på en offshoreplattform med utsikt over et forsyningsskip"
+  11-offshore-underdeck-rope-access-sunset:
+    en: "Rope access technician descending beneath an offshore platform deck at sunset"
+    lt: "Aukštalipis leidžiasi po jūrinės platformos deniu saulėlydžio fone"
+    "no": "Tilkomsttekniker firer seg ned under et offshore plattformdekk ved solnedgang"
+  12-offshore-rope-access-over-open-sea:
+    en: "Industrial rope access technician suspended safely on twin ropes above open sea"
+    lt: "Pramoninio alpinizmo specialistas saugiai dirba ant dvigubų virvių virš atviros jūros"
+    "no": "Tilkomsttekniker arbeider trygt i dobbelt tausystem over åpent hav"
