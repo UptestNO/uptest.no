@@ -3,17 +3,21 @@
 languages:
   - code: "en"
     label: "EN"
+    name: "English"
     link: ""
   - code: "lt"
     label: "LT"
+    name: "Lietuvių"
     link: "lt/"
   - code: "no"
     label: "NO"
+    name: "Norsk"
     link: "no/"
 
 common:
   en:
     language: "Language"
+    menu: "Menu"
     company: "Uptest, UAB"
     rights: "All rights reserved."
     phone_label: "Phone"
@@ -30,6 +34,7 @@ common:
     
   lt:
     language: "Kalba"
+    menu: "Meniu"
     company: "Uptest, UAB"
     rights: "Visos teisės saugomos."
     phone_label: "Telefonas"
@@ -46,6 +51,7 @@ common:
   
   "no":
     language: "Språk"
+    menu: "Meny"
     company: "Uptest, NUF"
     rights: "Alle rettigheter reservert."
     phone_label: "Telefon"

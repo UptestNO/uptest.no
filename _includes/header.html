@@ -14,8 +14,7 @@
             <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex justify-between items-center">
                 
                 <!-- Kalbų perjungimas -->
-                <div class="flex items-center space-x-2 sm:space-x-3 text-[11px] sm:text-xs">
-                    <span class="text-slate-500 font-medium mr-1 hidden sm:inline">{{ data.common[page.lang].language }}:</span>
+                <nav aria-label="{{ data.common[page.lang].language }}" class="flex items-center space-x-2 sm:space-x-3 text-[11px] sm:text-xs">
                     {% for lang in data.languages %}
                         {% assign target_link = lang.link %}
                         {% if page.layout == 'job' and page.job_id %}
@@ -32,15 +31,15 @@
                             {% endif %}
                         {% endif %}
         
-                        <a href="{{ site.baseurl }}/{{ target_link }}" class="transition-colors {% if page.lang == lang.code %}font-bold text-brand-600{% else %}font-medium text-slate-600 hover:text-brand-600{% endif %}">
-                            {{ lang.label }}
+                        <a href="{{ site.baseurl }}/{{ target_link }}" class="transition-colors {% if page.lang == lang.code %}font-bold text-brand-600{% else %}font-medium text-slate-600 hover:text-brand-600{% endif %}"{% if page.lang == lang.code %} aria-current="true"{% endif %}>
+                            {{ lang.name }}
                         </a>
                         
                         {% unless forloop.last %}
-                            <span class="text-slate-300">|</span>
+                            <span class="text-slate-300" aria-hidden="true">|</span>
                         {% endunless %}
                     {% endfor %}
-                </div>
+                </nav>
         
                 <!-- Secondary menu -->
                 <div class="flex items-center space-x-6 text-xs font-medium">
@@ -100,10 +99,11 @@
                     </nav>
 
                     <div class="lg:hidden flex items-center">
-                        <button id="mobile-menu-button" type="button" class="text-slate-800 hover:text-brand-600 focus:outline-none p-1.5 rounded-lg hover:bg-slate-100 transition-colors">
-                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"/>
-                            </svg>
+                        <button id="mobile-menu-button" type="button" aria-label="{{ data.common[page.lang].menu }}" aria-expanded="false" aria-controls="mobile-menu-panel" class="group w-10 h-10 flex items-center justify-center rounded-lg text-slate-800 hover:text-brand-600 hover:bg-slate-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 transition-colors">
+                            <span class="relative w-6 h-4 block" aria-hidden="true">
+                                <span class="absolute left-0 top-[3px] block w-6 h-[2px] rounded-full bg-current transition-transform duration-200 ease-out origin-center group-aria-expanded:translate-y-[4px] group-aria-expanded:rotate-45"></span>
+                                <span class="absolute left-0 top-[11px] block w-6 h-[2px] rounded-full bg-current transition-transform duration-200 ease-out origin-center group-aria-expanded:-translate-y-[4px] group-aria-expanded:-rotate-45"></span>
+                            </span>
                         </button>
                     </div>
                     
