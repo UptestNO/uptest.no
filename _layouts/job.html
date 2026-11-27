@@ -215,7 +215,11 @@
 
             const targetBtn = ctaWrap.querySelector('[data-cta-apply-btn]') || ctaWrap;
 
-            const setVisible = (visible) => {
+            let ctaVisible = false;
+            let hasScrolled = window.scrollY > 80;
+
+            const syncVisibility = () => {
+                const visible = hasScrolled && !ctaVisible;
                 stickyWrap.classList.toggle('translate-y-2', !visible);
                 stickyWrap.classList.toggle('scale-95', !visible);
                 stickyWrap.classList.toggle('opacity-0', !visible);
@@ -232,13 +236,23 @@
                 }
             };
 
+            const onScroll = () => {
+                const nextScrolled = window.scrollY > 80;
+                if (nextScrolled !== hasScrolled) {
+                    hasScrolled = nextScrolled;
+                    syncVisibility();
+                }
+            };
+
             const observer = new IntersectionObserver((entries) => {
-                setVisible(!entries[0].isIntersecting);
+                ctaVisible = entries[0].isIntersecting;
+                syncVisibility();
             }, {
                 threshold: 0.25,
                 rootMargin: '0px 0px -20px 0px'
             });
 
+            window.addEventListener('scroll', onScroll, { passive: true });
             observer.observe(targetBtn);
         })();
     </script>
