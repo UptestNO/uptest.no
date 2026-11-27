@@ -32,7 +32,8 @@
                         {% endif %}
         
                         <a href="{{ site.baseurl }}/{{ target_link }}" class="transition-colors {% if page.lang == lang.code %}font-bold text-brand-600{% else %}font-medium text-slate-600 hover:text-brand-600{% endif %}"{% if page.lang == lang.code %} aria-current="true"{% endif %}>
-                            {{ lang.name }}
+                            <span class="sm:hidden">{{ lang.label }}</span>
+                            <span class="hidden sm:inline">{{ lang.name }}</span>
                         </a>
                         
                         {% unless forloop.last %}
