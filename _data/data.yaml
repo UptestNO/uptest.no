@@ -317,7 +317,7 @@ jobs:
     salary: "Salary"
     apply_label: "Apply"
     apply_title: "Apply for This Position"
-    apply_desc: "Send your CV and relevant certificates to cv@uptest.no or contact our team directly."
+    apply_desc: "Send your CV or a brief overview of your experience and certificates to cv@uptest.no. You can also contact our team directly."
     apply_btn: "Apply"
     closed_notice: "This position is currently closed. Please visit our careers page for other opportunities."
     types:
@@ -336,7 +336,7 @@ jobs:
     salary: "Atlyginimas"
     apply_label: "Kandidatuoti"
     apply_title: "Kandidatuoti į šią poziciją"
-    apply_desc: "Atsiųskite savo CV ir turimus sertifikatus el. paštu cv@uptest.no arba susisiekite su mūsų komanda tiesiogiai."
+    apply_desc: "Atsiųskite savo CV arba trumpą patirties ir sertifikatų aprašymą el. paštu cv@uptest.no. Taip pat galite susisiekti su mūsų komanda tiesiogiai."
     apply_btn: "Kandidatuoti"
     closed_notice: "Ši pozicija šiuo metu uždaryta. Kviečiame peržiūrėti kitas karjeros galimybes."
     types:
@@ -355,7 +355,7 @@ jobs:
     salary: "Lønn"
     apply_label: "Søk"
     apply_title: "Søk på denne stillingen"
-    apply_desc: "Send din CV og relevante sertifikater til cv@uptest.no, eller ta kontakt med teamet vårt direkte."
+    apply_desc: "Send din CV eller en kort oversikt over din erfaring og sertifikater til cv@uptest.no. Du kan også kontakte teamet vårt direkte."
     apply_btn: "Søk"
     closed_notice: "Denne stillingen er for øyeblikket stengt. Besøk vår karriereside for andre muligheter."
     types:

@@ -193,11 +193,16 @@
     {% if page.active != false %}
     <!-- Sticky kandidatavimo mygtukas apačioje (matomas tik kol nematomas apatinis CTA mygtukas) -->
     <div id="sticky-job-apply" aria-hidden="true" style="bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));" class="fixed inset-x-0 z-20 flex justify-center px-4 pointer-events-none transition-all duration-300 ease-out translate-y-2 scale-95 opacity-0">
-        <a id="sticky-job-apply-btn" href="mailto:{{ apply_email }}?subject={{ page.title | uri_escape }}" tabindex="-1" class="pointer-events-none inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl font-bold text-sm sm:text-base text-white bg-brand-900 hover:bg-brand-800 shadow-xl shadow-brand-950/25 hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-200 border border-brand-700/70">
-            <svg class="w-4 h-4 sm:w-[18px] sm:h-[18px] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        <a id="sticky-job-apply-btn" href="mailto:{{ apply_email }}?subject={{ page.title | uri_escape }}" tabindex="-1" class="pointer-events-none group inline-flex items-center justify-center gap-2.5 sm:gap-3 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-white/95 backdrop-blur-md border border-slate-200/90 shadow-lg shadow-slate-900/15 hover:border-brand-300 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">
+            <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-brand-100/70 text-brand-700 group-hover:bg-brand-600 group-hover:text-white transition-colors duration-200 flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 sm:w-[18px] sm:h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+            </span>
+            <span class="text-sm sm:text-base font-bold tracking-tight text-slate-900 group-hover:text-brand-700 whitespace-nowrap transition-colors duration-200">{{ j.apply_btn }}</span>
+            <svg class="w-4 h-4 text-slate-400 group-hover:text-brand-600 group-hover:translate-x-0.5 transition-all flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
             </svg>
-            <span>{{ j.apply_btn }}</span>
         </a>
     </div>
 

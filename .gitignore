@@ -30,3 +30,7 @@ vendor/
 
 # Node
 node_modules/
+
+# Local notes
+todo.txt
+
